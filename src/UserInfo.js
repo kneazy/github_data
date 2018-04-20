@@ -52,25 +52,26 @@ class UserInfo extends Component {
     }
     render() {
         const data = this.repoData();
+        const {login, id, company, email, created_at, bio, html_url, avatar_url} = this.state
         return (
             <div className="wrapper">
                 <div className="data">
-                    <h1>{this.state.login}</h1>
-                    <p>login: {this.state.login}</p>
-                    <p>id: {this.state.id}</p>
-                    <p>company: {this.state.company}</p>
-                    <p>email: {this.state.email}</p>
-                    <p>created at: {this.state.created_at}</p>
-                    <p>bio: {this.state.bio}</p>
-                    <p>html url: {this.state.html_url}</p>
+                    <h1>{login}</h1>
+                    <p>login: {login}</p>
+                    <p>id: {id}</p>
+                    <p>company: {company}</p>
+                    <p>email: {email}</p>
+                    <p>created at: {created_at}</p>
+                    <p>bio: {bio}</p>
+                    <p>html url: {html_url}</p>
                     <h2>Repositories:</h2>
                     <ol>{data}</ol>
                 </div>
-                <img src = {this.state.avatar_url} alt="img"/>
+                <img src = {avatar_url} alt="img"/>
             </div>
         );
     }
-  }
+}
   
   export default UserInfo;
   
